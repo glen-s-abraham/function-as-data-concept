@@ -1,0 +1,22 @@
+#### Function 
+POST http://localhost:3001/api/function-structure
+Content-Type: application/json
+
+{
+    "name":"sum_function",
+    "code":"output['sum']=input.num1+input.num2;console.log(input.num1+input.num2)",
+    "parameters":["num1","num2"],
+    "returnValues":["sum"]
+}
+
+####Execute Function 
+POST http://localhost:3001/api/function/execute
+Content-Type: application/json
+
+{
+    "functionId":"64a668b60dff63e5dad4727b",
+    "arguements":{
+        "num1":10,
+        "num2":20
+    }
+}
